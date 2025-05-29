@@ -121,7 +121,7 @@ GRS : jumlah kapasitas mobil dalam garasi.
   - Duplicate Data: 0
   - Distribusi Data
 
-[distribusi data](https://github.com/Bumbii12/regresi-harga-rumah/blob/main/images/distribusi_data.png)
+![distribusi data](https://github.com/Bumbii12/regresi-harga-rumah/blob/main/images/distribusi_data.png)
 
   - Tampilan Dataset
 
@@ -267,8 +267,8 @@ Evaluasi dilakukan untuk mengukur performa kedua model (Linear Regression dan Ra
 
 - Random Forest menunjukkan performa yang lebih baik secara keseluruhan, terutama pada data pengujian, dengan R2 lebih tinggi dan error lebih kecil.
 - Hal ini menunjukkan Random Forest lebih mampu menangani kompleksitas data harga rumah dibanding Linear Regression.
-[Visualisasi Regresi Random Forest: Prediksi vs Nilai Aktual](https://github.com/Bumbii12/regresi-harga-rumah/blob/main/images/random_f.png)
----
+![Visualisasi Regresi Random Forest: Prediksi vs Nilai Aktual](https://github.com/Bumbii12/regresi-harga-rumah/blob/main/images/random_f.png)
+
 
 ## 7. Kesimpulan
 Proyek ini berhasil mengembangkan dan membandingkan dua model prediksi harga rumah di wilayah Tebet, Jakarta Selatan, yaitu regresi linear dan Random Forest. Berdasarkan evaluasi dengan metrik MAE, MSE, dan R², model Random Forest memberikan performa lebih baik dengan kemampuan menangkap pola data yang kompleks dan non-linear, sehingga menghasilkan prediksi harga yang lebih akurat dibanding regresi linear. Hasil ini menunjukkan bahwa Random Forest lebih sesuai digunakan untuk prediksi harga rumah di pasar properti Tebet yang variatif. Model ini dapat membantu pembeli, penjual, dan pengembang properti dalam pengambilan keputusan harga yang lebih objektif dan realistis.
