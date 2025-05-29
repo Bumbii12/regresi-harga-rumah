@@ -121,7 +121,7 @@ GRS : jumlah kapasitas mobil dalam garasi.
   - Duplicate Data: 0
   - Distribusi Data
 
-![distribusi data])
+[distribusi data](https://github.com/Bumbii12/regresi-harga-rumah/blob/main/images/distribusi_data.png)
 
   - Tampilan Dataset
 
@@ -267,7 +267,7 @@ Evaluasi dilakukan untuk mengukur performa kedua model (Linear Regression dan Ra
 
 - Random Forest menunjukkan performa yang lebih baik secara keseluruhan, terutama pada data pengujian, dengan R2 lebih tinggi dan error lebih kecil.
 - Hal ini menunjukkan Random Forest lebih mampu menangani kompleksitas data harga rumah dibanding Linear Regression.
-[Visualisasi Regresi Random Forest: Prediksi vs Nilai Aktual](https://)
+[Visualisasi Regresi Random Forest: Prediksi vs Nilai Aktual](https://github.com/Bumbii12/regresi-harga-rumah/blob/main/images/random_f.png)
 ---
 
 ## 7. Kesimpulan
