@@ -197,39 +197,39 @@ Langkah-langkah persiapan data:
    - Cocok untuk data dengan hubungan linear antar variabel.
 
    #### Kelebihan:
-      - Mudah dipahami dan diinterpretasikan.
-      - Proses pelatihan cepat dan efisien.
-      - Cocok untuk pola data linear.
+   - Mudah dipahami dan diinterpretasikan.
+   - Proses pelatihan cepat dan efisien.
+   - Cocok untuk pola data linear.
 
-      #### Kekurangan:
-      - Kurang fleksibel untuk data non-linear.
-      - Rentan terhadap outlier dan multikolinearitas.
-      - Akurasi menurun jika data tidak linear.
+   #### Kekurangan:
+   - Kurang fleksibel untuk data non-linear.
+   - Rentan terhadap outlier dan multikolinearitas.
+   - Akurasi menurun jika data tidak linear.
 
-      ---
+   ---
 
    ### 2. Random Forest Regressor
-      Random Forest Regressor adalah metode ensemble berbasis decision tree yang membangun banyak pohon dan menggabungkan hasilnya untuk prediksi yang lebih baik.
+   Random Forest Regressor adalah metode ensemble berbasis decision tree yang membangun banyak pohon dan menggabungkan hasilnya untuk prediksi yang lebih baik.
 
-      #### Proses:
-      - Dilakukan tuning hyperparameter dengan GridSearchCV.
-      - Hyperparameter yang dituning:
-      - `n_estimators` (jumlah pohon): 50, 100, 200
-      - `max_depth` (kedalaman pohon): None, 10, 20
-      - Model terbaik dipilih berdasarkan hasil tuning.
+   #### Proses:
+   - Dilakukan tuning hyperparameter dengan GridSearchCV.
+   - Hyperparameter yang dituning:
+   - `n_estimators` (jumlah pohon): 50, 100, 200
+   - `max_depth` (kedalaman pohon): None, 10, 20
+   - Model terbaik dipilih berdasarkan hasil tuning.
 
-      #### Kelebihan:
-      - Mampu menangani pola non-linear.
-      - Lebih tahan terhadap outlier.
-      - Memberikan estimasi pentingnya fitur.
-      - Performa lebih stabil daripada single decision tree.
+   #### Kelebihan:
+   - Mampu menangani pola non-linear.
+   - Lebih tahan terhadap outlier.
+   - Memberikan estimasi pentingnya fitur.
+   - Performa lebih stabil daripada single decision tree.
 
-      #### Kekurangan:
-      - Lebih lambat dalam pelatihan dan prediksi.
-      - Kurang interpretatif dibanding linear regression.
-      - Risiko overfitting jika tuning tidak optimal.
+   #### Kekurangan:
+   - Lebih lambat dalam pelatihan dan prediksi.
+   - Kurang interpretatif dibanding linear regression.
+   - Risiko overfitting jika tuning tidak optimal.
 
-      ---
+   ---
 
 
 ## 6. Evaluasi
