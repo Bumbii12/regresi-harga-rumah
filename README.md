@@ -189,14 +189,14 @@ Langkah-langkah persiapan data:
 
 ## 5. Modeling
    ### 1. Linear Regression
-      Linear Regression adalah algoritma regresi yang sederhana dan umum digunakan untuk memodelkan hubungan linear antara fitur (misal: luas bangunan, luas tanah, jumlah kamar) dengan target (harga rumah).
+   Linear Regression adalah algoritma regresi yang sederhana dan umum digunakan untuk memodelkan hubungan linear antara fitur (misal: luas bangunan, luas tanah, jumlah kamar) dengan target (harga rumah).
 
-      #### Proses:
-      - Model dilatih menggunakan data pelatihan.
-      - Tidak memerlukan tuning hyperparameter dalam implementasi dasarnya.
-      - Cocok untuk data dengan hubungan linear antar variabel.
+   #### Proses:
+   - Model dilatih menggunakan data pelatihan.
+   - Tidak memerlukan tuning hyperparameter dalam implementasi dasarnya.
+   - Cocok untuk data dengan hubungan linear antar variabel.
 
-      #### Kelebihan:
+   #### Kelebihan:
       - Mudah dipahami dan diinterpretasikan.
       - Proses pelatihan cepat dan efisien.
       - Cocok untuk pola data linear.
