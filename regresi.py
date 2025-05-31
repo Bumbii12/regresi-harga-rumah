@@ -335,6 +335,10 @@ print(f"MAE: {mae_test_rf}")
 print(f"MSE: {mse_test_rf}")
 print(f"R2 Score: {r2_test_rf}")
 
+print("Best Parameters:", grid_search.best_params_)
+
+"""Insight : Ini adalah parameter terbaik sebagai Parameter Akhir Model"""
+
 import pandas as pd
 
 compare_df = pd.DataFrame({
