@@ -232,8 +232,8 @@ Langkah-langkah persiapan data:
    - Model terbaik dipilih berdasarkan nilai R² tertinggi pada validasi silang (cross-validation).
    Parameter Akhir Model:
    - random_state: 42
-   -n_estimators: 200
-   - max_depth: None
+   - n_estimators: 200
+   - max_depth: 20
    > (diperoleh dari grid_search.best_params_)
 
    #### Kelebihan:
