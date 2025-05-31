@@ -121,7 +121,7 @@ GRS : jumlah kapasitas mobil dalam garasi.
   - Duplicate Data: 0
   - Distribusi Data
 
-![distribusi data](https://github.com/Bumbii12/regresi-harga-rumah/blob/main/images/distribusi_data.png)
+![distribusi data](https://raw.githubusercontent.com/Bumbii12/regresi-harga-rumah/refs/heads/main/images/distribusi_data.png)
 
   - Tampilan Dataset
 
@@ -149,9 +149,9 @@ Langkah-langkah persiapan data:
 2. **Standarisasi Nama Kolom**  
    Nama-nama kolom diubah menjadi huruf kecil semua agar konsisten dan memudahkan proses analisis selanjutnya.
 
-3. **Normalisasi Harga**  
-   Nilai pada kolom `harga` dikonversi dari satuan Rupiah ke juta Rupiah agar lebih mudah dibaca.  
-   Kolom `nomor` juga dihapus karena tidak memiliki pengaruh signifikan terhadap analisis.
+3. **Normalisasi Harga & Pembersihan Data**  
+   - Nilai pada kolom `harga` dikonversi dari satuan Rupiah ke juta Rupiah agar lebih mudah dibaca.  
+   - Kolom `nomor` juga dihapus karena tidak memiliki pengaruh signifikan terhadap analisis.
 
 4. **Pembuatan Label Kategori Harga**  
    Kategori harga ditentukan berdasarkan nilai kuartil:  
@@ -182,12 +182,25 @@ Langkah-langkah persiapan data:
    - `Mahal` adalah kategori dengan jumlah rumah terbanyak.  
    - Diikuti oleh `Menengah`, dan terakhir `Murah`.
 
-9. **Data Spliting**
+9. **Pemilihan Fitur (Feature Selection)**
+   Untuk membangun model regresi, dilakukan pemilihan fitur yang digunakan sebagai variabel independen (X).
+   Fitur-fitur yang dipilih adalah:
+   - lb (luas bangunan)
+   - lt (luas tanah)
+   - kt (jumlah kamar tidur)
+   - km (jumlah kamar mandi)
+   - grs (jumlah garasi)
+> Pemilihan ini didasarkan pada domain knowledge bahwa variabel-variabel tersebut secara langsung memengaruhi harga rumah, serta hasil analisis korelasi yang menunjukkan bahwa lt dan lb memiliki hubungan yang signifikan terhadap harga.
+
+10. **Data Splitting**
    Data dipecah menjadi 3 bagian:
    - 70% untuk training model
    - 30% untuk pengujian model
 
 ## 5. Modeling
+   Modeling dilakukan untuk memprediksi harga rumah berdasarkan fitur numerik yang telah dipilih. Dua algoritma digunakan dan dibandingkan performanya, yaitu Linear Regression dan Random Forest Regressor.
+
+
    ### 1. Linear Regression
    Linear Regression adalah algoritma regresi yang sederhana dan umum digunakan untuk memodelkan hubungan linear antara fitur (misal: luas bangunan, luas tanah, jumlah kamar) dengan target (harga rumah).
 
@@ -212,11 +225,16 @@ Langkah-langkah persiapan data:
    Random Forest Regressor adalah metode ensemble berbasis decision tree yang membangun banyak pohon dan menggabungkan hasilnya untuk prediksi yang lebih baik.
 
    #### Proses:
-   - Dilakukan tuning hyperparameter dengan GridSearchCV.
-   - Hyperparameter yang dituning:
-   - `n_estimators` (jumlah pohon): 50, 100, 200
-   - `max_depth` (kedalaman pohon): None, 10, 20
-   - Model terbaik dipilih berdasarkan hasil tuning.
+   - Model diinisialisasi dengan random_state=42 untuk memastikan reprodusibilitas.
+   - Tuning hyperparameter dilakukan menggunakan GridSearchCV dengan kombinasi:
+   - n_estimators: [50, 100, 200]
+   - max_depth: [None, 10, 20]
+   - Model terbaik dipilih berdasarkan nilai R² tertinggi pada validasi silang (cross-validation).
+   Parameter Akhir Model:
+   - random_state: 42
+   -n_estimators: 200
+   - max_depth: None
+   > (diperoleh dari grid_search.best_params_)
 
    #### Kelebihan:
    - Mampu menangani pola non-linear.
@@ -267,7 +285,7 @@ Evaluasi dilakukan untuk mengukur performa kedua model (Linear Regression dan Ra
 
 - Random Forest menunjukkan performa yang lebih baik secara keseluruhan, terutama pada data pengujian, dengan R2 lebih tinggi dan error lebih kecil.
 - Hal ini menunjukkan Random Forest lebih mampu menangani kompleksitas data harga rumah dibanding Linear Regression.
-![Visualisasi Regresi Random Forest: Prediksi vs Nilai Aktual](https://github.com/Bumbii12/regresi-harga-rumah/blob/main/images/random_f.png)
+![Visualisasi Regresi Random Forest: Prediksi vs Nilai Aktual](https://raw.githubusercontent.com/Bumbii12/regresi-harga-rumah/refs/heads/main/images/random_f.png)
 
 
 ## 7. Kesimpulan
