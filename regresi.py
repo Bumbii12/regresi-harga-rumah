@@ -88,7 +88,7 @@ df = df.rename(columns={
     'GRS': 'grs'
 })
 
-"""Mengganti satuan harga agar lebih readable"""
+"""Mengganti satuan harga agar lebih readable & dan menghapus kolom nomor karena tidak diperlukan"""
 
 df['harga'] = (df['harga']/1000000).astype(int)
 df.drop(columns=['nomor'], inplace=True)
